@@ -1,0 +1,26 @@
+From a47d272839a7b23eb5f54b0f8becf42b486ea6cf Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?David=20P=C3=A4tzel?= <david.paetzel@uni-a.de>
+Date: Fri, 11 Mar 2022 09:43:47 +0100
+Subject: [PATCH] Remove pybind11 download
+
+---
+ src/python/CMakeLists.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/src/python/CMakeLists.txt b/src/python/CMakeLists.txt
+index 887f25c..034ca13 100644
+--- a/src/python/CMakeLists.txt
++++ b/src/python/CMakeLists.txt
+@@ -3,8 +3,7 @@ find_package(Python3 COMPONENTS Interpreter Development.Module REQUIRED)
+ include(FetchContent)
+ FetchContent_Declare(
+     pybind11
+-    GIT_REPOSITORY https://github.com/pybind/pybind11
+-    GIT_TAG v2.7.1)
++    SOURCE_DIR @pybind11_src@)
+ FetchContent_MakeAvailable(pybind11)
+ 
+ add_library(ale-py MODULE ale_python_interface.cpp)
+-- 
+2.34.1
+
