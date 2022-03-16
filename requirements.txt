@@ -1,4 +1,3 @@
-# torch =1.10.2
 #collections
 #json
 #time
@@ -9,7 +8,10 @@ gym
 matplotlib
 opencv-python
 atari-py
-# atari_py
 torch
-torchvision
+# We have torch 1.9.0 and thus only torchvision 0.10.0 is supported.
+# See https://pypi.org/project/torchvision/ .
+torchvision==0.10.0
+
+# We install this directly via nix and *must not* add it here.
 # ale-py

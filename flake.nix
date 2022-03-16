@@ -61,8 +61,7 @@
 
         # The file referenced here *must* be part of this flake (i.e. checked
         # into the same Git repository). Also, you *must* use a relative path.
-        # requirements = builtins.readFile ./requirements.txt;
-        requirements = "#";
+        requirements = builtins.readFile ./requirements.txt;
 
         # Select providers for dependencies that should not be installed from
         # PyPI or conda (e.g. ones that rely on system libraries such as
