@@ -1,5 +1,5 @@
 {
-  description = "BA flake";
+  description = "Python environment for ale-py";
 
   inputs = {
     # nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-21.11";
